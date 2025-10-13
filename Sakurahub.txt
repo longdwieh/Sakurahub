@@ -3553,7 +3553,7 @@ spawn(function()
 						if game:GetService("Workspace"):FindFirstChild(v1741.Name) then
 							topos(v1741.CFrame);
 						end
-					until (AutoFarmChest == false) or  not v1741.Parent
+					until (AutoFarmChest == true) or  not v1741.Parent
 					topos(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame);
 					_G.MagnitudeAdd = _G.MagnitudeAdd + 1500 ;
 					break;
@@ -3577,7 +3577,7 @@ spawn(function()
 		end);
 	end
 end);
-v68:Toggle("Auto Farm Chest Mirage island", false, function(v387)
+v68:Toggle("Auto Farm Chest Mirage island", true, function(v387)
 	_G.ChestMirage = v387;
 	StopTween(_G.ChestMirage);
 end);
@@ -12264,6 +12264,7 @@ function FastAttackConnectorFunction()
 end
 
 return FastAttackConnectorFunction();
+
 
 
 
