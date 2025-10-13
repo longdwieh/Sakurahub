@@ -3893,8 +3893,7 @@ spawn(function()
 end);
 v68:Toggle("Auto Farm Cake Prince", _G.DoughtBoss, function(v394)
 	_G.DoughtBoss = v394;
-    topos(CFrame.new( -5496.17432, 313.768921, -2841.53027));
-	StopTween(_G.DoughtBoss);
+    topos(CFrame.new( -1762.00, 38.00, -11878.00));
 end);
 v68:Toggle("Accept Quest Cake Prince", true, function(v395)
 	_G.QuestCake = v395;
@@ -12265,6 +12264,7 @@ function FastAttackConnectorFunction()
 end
 
 return FastAttackConnectorFunction();
+
 
 
 
