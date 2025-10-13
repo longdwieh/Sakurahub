@@ -3808,7 +3808,7 @@ spawn(function()
 				game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Bones", "Buy", 1, 1);
 			end
 		end
-	end);
+    end);
 end);
 v68:Toggle("Auto Pray", pry, function(v392)
 	_G.Pray = v392;
@@ -3838,6 +3838,7 @@ spawn(function()
 				game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("gravestoneEvent", 2);
 			end
 		end
+topos(CFrame.new( -1762.00, 38.00, -11878.00));
 	end);
 end);
 v68:Seperator("Dought Boss");
@@ -12264,6 +12265,7 @@ function FastAttackConnectorFunction()
 end
 
 return FastAttackConnectorFunction();
+
 
 
 
