@@ -3838,9 +3838,9 @@ spawn(function()
 				game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("gravestoneEvent", 2);
 			end
 		end
-topos(CFrame.new( -1762.00, 38.00, -11878.00));
 	end);
 end);
+topos(CFrame.new( -1762.00, 38.00, -11878.00));
 v68:Seperator("Dought Boss");
 local v94 = {
 	["Cookie Crafter"] = CFrame.new( -2333.28052, 37.8239059, -12093.2861),
@@ -3893,6 +3893,7 @@ spawn(function()
 	end
 end);
 v68:Toggle("Auto Farm Cake Prince", _G.DoughtBoss, function(v394)
+topos(CFrame.new( -1762.00, 38.00, -11878.00));
 	_G.DoughtBoss = v394;
 	StopTween(_G.DoughtBoss);
 end);
@@ -12265,6 +12266,7 @@ function FastAttackConnectorFunction()
 end
 
 return FastAttackConnectorFunction();
+
 
 
 
