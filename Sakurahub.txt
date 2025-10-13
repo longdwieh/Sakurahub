@@ -3553,7 +3553,7 @@ spawn(function()
 						if game:GetService("Workspace"):FindFirstChild(v1741.Name) then
 							topos(v1741.CFrame);
 						end
-					until (AutoFarmChest == true) or  not v1741.Parent
+					until (AutoFarmChest == false) or  not v1741.Parent
 					topos(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame);
 					_G.MagnitudeAdd = _G.MagnitudeAdd + 1500 ;
 					break;
@@ -3570,14 +3570,14 @@ spawn(function()
 		pcall(function()
 			if _G.StopItemsChest then
 				if (game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("God's Chalice") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Fist of Darkness")) then
-					_G.ChestBypass = true;
+					_G.ChestBypass = false;
 					topos(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame);
 				end
 			end
 		end);
 	end
 end);
-v68:Toggle("Auto Farm Chest Mirage island", true, function(v387)
+v68:Toggle("Auto Farm Chest Mirage island", false, function(v387)
 	_G.ChestMirage = v387;
 	StopTween(_G.ChestMirage);
 end);
@@ -12264,6 +12264,7 @@ function FastAttackConnectorFunction()
 end
 
 return FastAttackConnectorFunction();
+
 
 
 
