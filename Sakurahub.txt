@@ -1619,7 +1619,7 @@ function CheckQuest()
 			CFrameMon = CFrame.new( 10729.17, -2087.73, 9342.57);
          elseif ((MyLevel == 2650) or (MyLevel <= 2675)) then
 			Mon = "Sea Chanter";
-			LevelQuest = 1;
+			LevelQuest = 2;
 			NameQuest = "SubmergedQuest2";
 			NameMon = "Sea Chanter";
 			CFrameQuest = CFrame.new( 10884.94, -2086.20, 10036.44);
@@ -3902,9 +3902,7 @@ spawn(function()
 	while wait() do
 		if (_G.DoughtBoss and  not _G.QuestCake) then
 			pcall(function()
-				elseif (_G.SelectIsland == "Cake Island") then
-				topos(CFrame.new( -1897, 14, -11576));
-     local v1746 = CFrame.new( -2091.911865234375, 70.00884246826172, -12142.8359375);
+				local v1746 = CFrame.new( -2091.911865234375, 70.00884246826172, -12142.8359375);
 				if game:GetService("Workspace").Enemies:FindFirstChild("Cake Prince") then
 					for v2075, v2076 in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
 						if ((v2076.Name == "Cake Prince") or (v2076.Name == "Dough King")) then
@@ -12266,8 +12264,6 @@ function FastAttackConnectorFunction()
 end
 
 return FastAttackConnectorFunction();
-
-
 
 
 
