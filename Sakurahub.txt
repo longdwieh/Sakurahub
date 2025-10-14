@@ -3077,14 +3077,15 @@ local v68 = v66:T("Tab General", "rbxassetid://10723407389");
 local v69 = v66:T("Tab Setting Other", "rbxassetid://10734950309");
 local v70 = v66:T("Tab Item", "rbxassetid://10734975692");
 local v71 = v66:T("Tab Race & Mirage", "rbxassetid://10747372167");
-local v72 = v66:T("Tab Sea Event", "rbxassetid://10709761530");
-local v73 = v66:T("Tab Local Player", "rbxassetid://10747373176");
-local v74 = v66:T("Tab Visual", "rbxassetid://10723346959");
-local v75 = v66:T("Tab Raid", "rbxassetid://10723345749");
-local v76 = v66:T("Tab Teleport", "rbxassetid://10723434557");
-local v77 = v66:T("Tab Shop", "rbxassetid://10734952479");
-local v78 = v66:T("Tab Devil Fruit", "rbxassetid://10709761889");
-local v79 = v66:T("Tab Miscellaneous", "rbxassetid://10709782582");
+local v72 = v66:T("Tab Prehistoric", ""
+local v73 = v66:T("Tab Sea Event", "rbxassetid://10709761530");
+local v74 = v66:T("Tab Local Player", "rbxassetid://10747373176");
+local v75 = v66:T("Tab Visual", "rbxassetid://10723346959");
+local v76 = v66:T("Tab Raid", "rbxassetid://10723345749");
+local v77 = v66:T("Tab Teleport", "rbxassetid://10723434557");
+local v78 = v66:T("Tab Shop", "rbxassetid://10734952479");
+local v79 = v66:T("Tab Devil Fruit", "rbxassetid://10709761889");
+local v80 = v66:T("Tab Miscellaneous", "rbxassetid://10709782582");
 v67:Seperator("Join Discord");
 v67:Label("Everyone Goes Into Socialize");
 v67:Button("Copy Discord Link", function()
@@ -12264,6 +12265,7 @@ function FastAttackConnectorFunction()
 end
 
 return FastAttackConnectorFunction();
+
 
 
 
