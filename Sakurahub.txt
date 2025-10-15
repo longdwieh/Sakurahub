@@ -12265,6 +12265,79 @@ end
 
 return FastAttackConnectorFunction();
 
+            end
+        end
+    end
+end)
+
+--// Legendary Sword Dealer Only (World 2)
+task.spawn(function()
+    local previousSword = nil
+    local sentLegendarySword = false
+    
+    while true do
+        task.wait(1)
+        if game.PlaceId == SEA2_PLACE_ID then
+            -- Reset flag when checking for new sword
+            if not previousSword then
+                sentLegendarySword = false
+            end
+            
+            local currentSword = nil
+            local success, result
+            
+            -- Check for Shizu
+            success, result = pcall(function()
+                return ReplicatedStorage.Remotes.CommF_:InvokeServer("LegendarySwordDealer", "1")
+            end)
+            if success and result then
+                currentSword = "Shizu"
+            end
+            
+            -- Check for Oroshi if Shizu not found
+            if not currentSword then
+                success, result = pcall(function()
+                    return ReplicatedStorage.Remotes.CommF_:InvokeServer("LegendarySwordDealer", "2")
+                end)
+                if success and result then
+                    currentSword = "Oroshi"
+                end
+            end
+            
+            -- Check for Saishi if others not found
+            if not currentSword then
+                success, result = pcall(function()
+                    return ReplicatedStorage.Remotes.CommF_:InvokeServer("LegendarySwordDealer", "3")
+                end)
+                if success and result then
+                    currentSword = "Saishi"
+                end
+            end
+
+            -- Send webhook if new sword found and not already sent
+            if currentSword and currentSword ~= previousSword and not sentLegendarySword then
+                sendBossWebhook("Legendary Sword", currentSword)
+                previousSword = currentSword
+                sentLegendarySword = true
+            elseif not currentSword and previousSword then
+                -- Dealer left, reset for next detection
+                previousSword = nil
+                sentLegendarySword = false
+            end
+        else
+            -- Reset when not in World 2
+            previousSword = nil
+            sentLegendarySword = false
+            task.wait(5) -- Longer wait when not in correct world
+        end
+    end
+
+end)
+
+
+
+
+
 
 
 
